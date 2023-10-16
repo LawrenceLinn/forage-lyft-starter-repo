@@ -13,3 +13,7 @@ class TestCarriganTires(unittest.TestCase):
         tire_wear = np.array([0.1, 0.2, 0.2, 0.1])
         tires = CarriganTires(tire_wear)
         self.assertFalse(tires.needs_service())
+
+
+if __name__ == "__main__":
+    unittest.main()
