@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from datetime import datetime
+from datetime import date
 from car import Car
 from engine.engine import Engine
 from battery.battery import Battery
@@ -16,8 +16,8 @@ class CarFactory(ABC):
 
     def create_calliope(
         self,
-        current_date: datetime,
-        last_service_date: datetime,
+        current_date: date,
+        last_service_date: date,
         current_mileage: int,
         last_service_mileage: int,
     ) -> Car:
@@ -28,8 +28,8 @@ class CarFactory(ABC):
 
     def create_glissade(
         self,
-        current_date: datetime,
-        last_service_date: datetime,
+        current_date: date,
+        last_service_date: date,
         current_mileage: int,
         last_service_mileage: int,
     ) -> Car:
@@ -40,8 +40,8 @@ class CarFactory(ABC):
 
     def create_palindrome(
         self,
-        current_date: datetime,
-        last_service_date: datetime,
+        current_date: date,
+        last_service_date: date,
         warning_light_on: bool,
     ) -> Car:
         engine = SternmanEngine(warning_light_on)
@@ -51,8 +51,8 @@ class CarFactory(ABC):
     
     def creaete_rorschach(
         self,
-        current_date: datetime,
-        last_service_date: datetime,
+        current_date: date,
+        last_service_date: date,
         current_mileage: int,
         last_service_mileage: int,
     ) -> Car:
@@ -63,8 +63,8 @@ class CarFactory(ABC):
 
     def create_thovex(
         self,
-        current_date: datetime,
-        last_service_date: datetime,
+        current_date: date,
+        last_service_date: date,
         current_mileage: int,
         last_service_mileage: int,
     ) -> Car:
